@@ -4,108 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Dann Kang'ere</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    .container {
-      width: 90%;
-      max-width: 900px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 20px;
-      padding: 40px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-    p.subtitle {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #cbd5f5;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-    .info {
-      line-height: 1.8;
-    }
-    .info h3 {
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
-    .form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, textarea {
-      padding: 12px;
-      border: none;
-      border-radius: 10px;
-      outline: none;
-      background: rgba(255,255,255,0.1);
-      color: #fff;
-    }
-    textarea {
-      resize: none;
-      height: 120px;
-    }
-    button {
-      padding: 12px;
-      border: none;
-      border-radius: 10px;
-      background: #38bdf8;
-      color: #000;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    button:hover {
-      transform: scale(1.05);
-      background: #0ea5e9;
-    }
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-    @media(max-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav>
+    <h2>Dann Kang'ere</h2>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+    </div>
+  </nav>
+
   <div class="container">
     <h1>Contact Me</h1>
     <p class="subtitle">Let's build something amazing together</p>
-    <div class="contact-grid">
 
+    <div class="contact-grid">
       <!-- Contact Info -->
       <div class="info">
         <h3>Contact Information</h3>
         <p><strong>Name:</strong> Dann Kang'ere</p>
-        <p><strong>Phone:</strong> +254706835183</p>
+        <p><strong>Phone:</strong> +254 706 835 183</p>
         <p><strong>Email:</strong> wanjikudann@gmail.com</p>
         <p><strong>Location:</strong> Nairobi, Kenya</p>
 
@@ -115,13 +35,15 @@
 
       <!-- Contact Form -->
       <div class="form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
-
     </div>
+
     <footer>
       <p>&copy; 2026 Dann Kang'ere | Portfolio</p>
     </footer>
