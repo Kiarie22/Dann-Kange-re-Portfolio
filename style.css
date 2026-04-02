@@ -177,3 +177,48 @@ footer {
     padding: 40px 20px;
   }
 }
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
+  font-size: 1rem;
+}
+
+.contact textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact button {
+  background: #2563eb;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact button:hover {
+  background: #1d4ed8;
+}
+
+/* 📱 Mobile adjustments */
+@media (max-width: 600px) {
+  .contact input,
+  .contact textarea,
+  .contact button {
+    width: 100%; /* full width on small screens */
+    font-size: 1.1rem; /* slightly larger text */
+  }
+}
